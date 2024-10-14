@@ -1,0 +1,191 @@
+<!-- BMTS-KentState/static/Employee.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closed Tickets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+            color: #333; /* Dark text for readability */
+        }
+        h1 {
+            text-align: center;
+            color: #003366; /* Navy color for the heading */
+        }
+        nav {
+            background-color: #003366; /* Navy background for the navigation */
+            padding: 10px; /* Padding for the nav */
+            text-align: center; /* Center the nav items */
+        }
+        nav a {
+            color: #ffcc00; /* Yellow text for links */
+            text-decoration: none; /* Remove underline from links */
+            margin: 0 15px; /* Spacing between links */
+            font-weight: bold; /* Bold text for links */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        table {
+            width: 80%;
+            margin: 20px auto; /* Center the table */
+            border-collapse: collapse; /* Merge borders */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+        th, td {
+            border: 1px solid #003366; /* Navy border for table cells */
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ffcc00; /* Yellow background for headers */
+            color: #003366; /* Navy text for headers */
+        }
+        tr:nth-child(even) {
+            background-color: #e6e6e6; /* Light gray for even rows */
+        }
+        tr:hover {
+            background-color: #d1e0e0; /* Light blue on hover */
+        }
+        /* Add styles for the filter form */
+        #filterForm {
+            background-color: #003366; /* Navy background */
+            padding: 15px; /* Padding around the form */
+            border-radius: 5px; /* Rounded corners */
+            display: inline-block; /* Keep the form inline */
+        }
+        #filterForm label {
+            color: #ffcc00; /* Yellow text for labels */
+            margin-right: 10px; /* Spacing between label and input */
+        }
+        #filterForm input[type="text"],
+        #filterForm input[type="date"] {
+            padding: 5px; /* Padding inside input fields */
+            border: 1px solid #ffcc00; /* Yellow border */
+            border-radius: 3px; /* Rounded corners for inputs */
+            margin-right: 10px; /* Spacing between inputs */
+        }
+        #filterForm button {
+            background-color: #ffcc00; /* Yellow background for button */
+            color: #003366; /* Navy text for button */
+            border: none; /* Remove border */
+            padding: 5px 10px; /* Padding for button */
+            border-radius: 3px; /* Rounded corners for button */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        #filterForm button:hover {
+            background-color: #e6e600; /* Slightly darker yellow on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="open_tickets.html">Open Tickets</a>
+        <a href="closed_tickets.html">Closed Tickets</a>
+        <a href="employee_dashboard.html">Employee Dashboard</a>
+    </nav>
+    <h1>Closed Tickets</h1>
+    <div style="text-align: right; margin: 20px;">
+        <form id="filterForm">
+            <label for="bathroomType">Bathroom Type:</label>
+            <input type="text" id="bathroomType" name="bathroomType" placeholder="Enter Bathroom Type">
+            <label for="dateResolved">Date Resolved:</label>
+            <input type="date" id="dateResolved" name="dateResolved">
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Ticket Number</th>
+                <th>Bathroom Number</th>
+                <th>Submitter Email</th>
+                <th>Ticket Description</th>
+                <th>Resolution Status</th>
+                <th>Date Resolved</th>
+                <th>Time Resolved</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example row -->
+            <tr>
+                <td>001</td>
+                <td>Bathroom 1</td>
+                <td>john.doe@example.com</td>
+                <td>Leaking faucet</td>
+                <td>Resolved</td>
+                <td>2023-10-01</td>
+                <td>14:30</td>
+            </tr>
+            <!-- New example rows -->
+            <tr>
+                <td>002</td>
+                <td>Bathroom 2</td>
+                <td>jane.smith@example.com</td>
+                <td>Clogged toilet</td>
+                <td>Resolved</td>
+                <td>2023-10-02</td>
+                <td>09:15</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Bathroom 3</td>
+                <td>alice.jones@example.com</td>
+                <td>Broken light fixture</td>
+                <td>Resolved</td>
+                <td>2023-10-03</td>
+                <td>11:45</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Bathroom 4</td>
+                <td>bob.brown@example.com</td>
+                <td>Leaky sink</td>
+                <td>Resolved</td>
+                <td>2023-10-04</td>
+                <td>16:00</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Bathroom 5</td>
+                <td>charlie.white@example.com</td>
+                <td>Missing soap dispenser</td>
+                <td>Resolved</td>
+                <td>2023-10-05</td>
+                <td>10:30</td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>Bathroom 6</td>
+                <td>david.green@example.com</td>
+                <td>Toilet paper holder broken</td>
+                <td>Resolved</td>
+                <td>2023-10-06</td>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>007</td>
+                <td>Bathroom 7</td>
+                <td>emily.black@example.com</td>
+                <td>Water temperature issue</td>
+                <td>Resolved</td>
+                <td>2023-10-07</td>
+                <td>15:20</td>
+            </tr>
+            <tr>
+                <td>008</td>
+                <td>Bathroom 8</td>
+                <td>frank.gray@example.com</td>
+                <td>Faucet not turning off</td>
+                <td>Resolved</td>
+                <td>2023-10-08</td>
+                <td>13:10</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</body>
+</html>
